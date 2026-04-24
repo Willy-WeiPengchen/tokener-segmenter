@@ -31,6 +31,22 @@ DOI: 10.17605/OSF.IO/2ZMXS
 4. 语玄时体关连生：第二个切分专利升级补充的核心概念，依据语玄论的句法界定，是链元的核心构成要素，涵盖“时间+谓语动作+语者+虚实+关系+连接+生成”七大核心要素，确保链元具备完整的思想表达与逻辑闭环，为链元自动切分提供多维度核心判定依据。
 5. 逻修语树是链元层级关联的核心结构，其1-5级分别对应文本核心思想、支撑思想、标准链元、细化补充、辅助补充，与链元的重要程度、逻辑优先级一一对应，方便区分链元层级、明确逻辑关联，支撑链元自动切分后的层级校验。
 （技术概念解释：本标准以1-5级作为公开参考实现，选择切的起点可以自由定义，覆盖从核心思想到辅助补充的完整文本结构。本专利的权利要求保护的是基于33种逻辑标签、语玄句法等对各级逻修语树的生成方法与用途，以及整体技术方案，而非某具体级数。任何试图更改层级数量、同时利用链元核心定义对文本进行逻辑层级处理的行为，依然落入本专利的保护范围。链元不做无意义的算法臃肿叠加，因为7级及以上已是人类创作与文档结构的物理极致，超过该阈值的切分不具备工业级实用性，亦非文本思想的自然形态，故仅作为思想实验存在。）
+Logic-Rhetorical-Grammar Tree (LRG Tree, 逻修语树)
+Definition
+The Logic-Rhetorical-Grammar Tree (LRG Tree) is the core hierarchical structure for Tokener correlation within the Tokener System. Tiers 1 through 5 respectively correspond to: Core Idea, Supporting Idea, Standard Tokener, Detailed Supplement, and Auxiliary Supplement. Each tier maps one-to-one with the Tokener’s importance and logical priority, facilitating precise tier differentiation and explicit logical association.
+Term Breakdown
+逻	Logic	Logical tag matching and boundary judgment of Tokener units
+修	Rhetoric	Rhetorical structure recognition and hierarchical correlation
+语	Grammar	Text grammar filtering and structural completeness verification
+树	Tree	Tiered association framework covering hierarchical classification
+Core Features
+Logic: Determines independent Tokener boundaries via 33 standardized logical tags and semantic independence verification.
+Rhetoric: Recognizes textual rhetorical relations to build orderly hierarchical connections between Tokener units.
+Grammar: Guarantees syntactic rationality and structural integrity for every single Tokener unit.
+Tree: Organizes all parsed Tokener units into a unified 1–5 tier hierarchical structure, ranging from core idea down to auxiliary supplementary content.
+Term & Intellectual Property Statement
+“Logic-Rhetorical-Grammar Tree (LRG Tree)” is an original academic and technical term coined and defined exclusively by Pengchen Wei (Willy Wei). It uniquely refers to the proprietary hierarchical correlation structure inside the Tokener System.
+All coinage rights, definition rights, copyright and patent-related intellectual property rights are fully and exclusively retained by the inventor.
 
 三、核心专利说明
 本项目基于两个核心发明专利构建，具体专利信息如下：
@@ -60,7 +76,7 @@ DOI: 10.17605/OSF.IO/2ZMXS
 1. 文本预处理：对输入文本进行语法清洗，剔除无效字符、冗余空格，拆分句子与段落，形成“篇—段—句”三级结构，为后续切分提供基础；
 2. 逻辑标签匹配：基于预设的33种逻辑标签库，对预处理后的每一句文本进行逻辑属性识别，匹配对应的逻辑标签，识别过程聚焦逻辑动作与逻辑关系，不涉及复杂语义解析；
 3. 链元边界判定：以逻辑标签为核心依据，遵循“一个逻辑标签对应一个独立链元”“一个链元=一个独立思想”的原则，判定链元边界——若单句文本匹配单个逻辑标签，且满足“包含核心素材、专属术语、逻辑关系、逻辑动作”四大条件，则该单句即为一个独立链元；若单句匹配多个逻辑标签，则按逻辑动作的独立性拆分，确保每个拆分后的链元仅对应一个逻辑标签、一个独立思想；
-4. 层级关联与校验：结合句—段—篇三级逻辑提纲，建立各链元的层级关联[对应逻修语树1-5级（后续专利最大支持7级）结构]，对拆分后的链元进行校验，剔除无合理依据的重复、冗余链元，确保链元总数统计的准确性；
+4. 层级关联与校验：结合句—段—篇三级逻辑提纲，建立各链元的层级关联[对应逻修语树层级结构]，对拆分后的链元进行校验，剔除无合理依据的重复、冗余链元，确保链元总数统计的准确性；
 5. 输出结果：输出切分后的链元列表、各链元对应的逻辑标签及层级信息，同步输出链元总数，为后续链元计量、计费提供核心数据支撑。
 
 六、技术架构概览
